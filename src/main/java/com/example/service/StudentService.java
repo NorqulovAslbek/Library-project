@@ -92,7 +92,29 @@ public class StudentService {
             studentRepository.deleteById(id);
             return true;
         } else {
-            throw new AppBadException("Bunday id li student topiulmadi!");
+            throw new AppBadException("Bunday id li student topilmadi!");
+        }
+    }
+
+    /**
+     * id orqali update qiluvchi method.
+     * @param id Integer
+     * @param dto StudentDTO
+     * @return ResponseEntity
+     */
+    public boolean updateStudentById(Integer id,StudentDTO dto){
+        if(studentRepository.existsById(id)){
+            StudentEntity newStudent=new StudentEntity();
+            newStudent.setId(id);
+            newStudent.setAge(dto.getAge());
+            newStudent.setName(dto.getName());
+            newStudent.setSurname(dto.getSurname());
+            newStudent.setPhone(dto.getPhone());
+            newStudent.setCreatedDate(dto.getCreatedDate());
+            studentRepository.save(newStudent);
+            return true;
+        }else {
+            throw new AppBadException("Bunday id li student topilmadi");
         }
     }
 

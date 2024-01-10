@@ -63,9 +63,15 @@ public class StudentController {
         return ResponseEntity.ok(studentService.deleteStudentById(id));
     }
 
+    /**
+     * id orqali update qiluvchi method.
+     * @param id Integer
+     * @param studentDTO StudentDTO
+     * @return ResponseEntity
+     */
     @PutMapping("/{id}")
-    public ResponseEntity<StudentDTO> updateStudentById(@PathVariable Integer id, @RequestBody StudentDTO studentDTO) {
-
+    public ResponseEntity<?> updateStudentById(@PathVariable Integer id, @RequestBody StudentDTO studentDTO) {
+        return ResponseEntity.ok(studentService.updateStudentById(id, studentDTO));
     }
 
 

@@ -13,8 +13,11 @@ Content-Type: application/json
 GET localhost:8080/student
 
 ### GET Student by id
+GET localhost:8080/student/1
 
-GET localhost:8080/student/9
+### DELETE student by id
+DELETE localhost:8080/student/1
+
 
 
 
