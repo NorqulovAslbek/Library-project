@@ -1,0 +1,33 @@
+    **  Library Project **
+
+Do project using Spring Boot (Rest api) + Hibernate.
+Controller + Service + Repository
+
+Book (id,title,author, publishYear)
+Student (id, name, surname,phone, createdDate)
+StudentBook (id,student_id,book_id,createdDate,Status,returnedDate,duration)
+
+
+Write following API list;
+
+1. Book
+    1.POST [.../book/] - for creating book.
+    2.GET [.../book/] - for getting book list.
+    3.GET [.../book/{id}] - get book by id.
+    4.DELETE [.../book/{id}] - for deleting book.
+    5.PUT [.../book/{id}] - for updating book.
+
+2. Student
+    1.POST [.../student/] - fore creating student.
+    2.GET [.../student/] - for getting student list.
+    3.GET [.../student/{id}] - get student by id.
+    4.DELETE [.../student/{id}] - for deleting student.
+    5.PUT [.../student/{id}] - for updating student.
+
+3. StudentBook
+    1.POST [.../student_book/] - for taking book . (studentId,bookId)
+    2.PUT [.../student_book/{id}] - for returning book .
+    3.GET [.../student_book/] - for getting student_book list.
+    4.GET [.../student_book/{id}] - get student_book by id.
+    5.GET [.../student_book/student/{id}] - return all student taken book
+    6.GET [.../student_book/book/{id}] - return all book taken list
